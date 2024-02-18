@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# react-basics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Welcome to react-basics! This repository is a comprehensive collection of various React.js functionalities and state management solutions. It's designed to demonstrate the use of Redux, Context API, Zustand, Recoil, along with various testing methods and optimization techniques in a React.js environment. Check out each feature branch based on your need if you would like to see detailed implementation of each functionality 
 
-In the project directory, you can run:
+## Features
 
-### `yarn start`
+- **Redux Implementation**: State management using Redux, showcasing actions, reducers, and store configurations.
+- **Context API Usage**: Utilizing Context API for state management and theme toggling examples.
+- **Zustand State Management**: Simple, fast and scalable state management using Zustand.
+- **Recoil for State Management**: Implementing Recoil to manage atom and selector based states.
+- **Testing**: Includes test cases for components and state management implementations.
+- **Optimization Techniques**: Demonstrations of React performance optimization techniques.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js (version 12 or above)
+- Yarn or npm installed
+- Basic understanding of React.js concepts
 
-### `yarn test`
+## Installation and Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. clone the repository
+```bash
+git clone https://github.com/jasonkang14/react-basics.git
+cd react-basics
+```
 
-### `yarn build`
+2. Install dependencies:
+```bash
+yarn install
+# or
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the Project with Vite
+To run the project using Vite, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Start the development server:
+```bash
+# the original command is `dev` but I have changed it to `start` in package.json to integrate some tools easier
+yarn start
+# or
+npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. This will start the Vite development server.
 
-### `yarn eject`
+Open your browser:
+Navigate to http://localhost:5173 to view the app.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Building for Production
+To build the project for production, run:
+```bash
+yarn build
+# or
+npm run build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This command will generate a `dist` folder which contains the production build of your app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributing
+Contributions to enhance this project are welcome. Feel free to fork this repository and submit pull requests.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Contact
+If you have any questions or suggestions, please feel free to contact me at jasonkang14@gmail.com.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
