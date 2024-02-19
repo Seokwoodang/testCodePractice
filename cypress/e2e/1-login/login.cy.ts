@@ -1,8 +1,30 @@
-describe("로그인 화면",()=>{
-    it("사용자는 아이디와 비밀번호를 사용해서 로그인한다",()=>{
-        //given - 로그인 페이지에 접근한다
-        //when - 아이디와 비밀번호를 
-        //then
+describe("로그인 화면", () => {
+  it("사용자는 아이디와 비밀번호를 사용해서 로그인한다", () => {
+    //given - 로그인 페이지에 접근한다
+    cy.visit("/login");
+    cy.get("[data-cy=emailInput]").as("emailInput");
+    cy.get("[data-cy=passwordInput]").as("passwordInput");
 
-    })
-})
+    //when - 아이디와 비밀번호를
+    cy.get("@emailInput").type("test@email.com");
+    cy.get("@passwordInput").type("password");
+
+    cy.get("@emailInput").invoke("val").should("eq", "test@email.com");
+    cy.get("@passwordInput").invoke("val").should("eq", "password");
+
+    cy.intercept(
+      {
+        method: "POST",
+        url: "/user/login",
+      },
+      {
+        token: "AUTH_TOKEN",
+      }
+    ).as("login");
+
+    cy.get("[data-cy=loginButton]").should("exist").click();
+
+    //then
+    cy.url().should("include", "http://localhost:3000");
+  });
+});
